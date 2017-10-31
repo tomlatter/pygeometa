@@ -54,6 +54,7 @@ LOGGER = logging.getLogger(__name__)
 
 
 def configparser2yaml(cpfile):
+    """convenience function to convert a ConfigParser object to YAML"""
     dict_ = {}
     cp = ConfigParser()
 
@@ -132,6 +133,7 @@ def configparser2yaml(cpfile):
 @click.option('--output', type=click.File('w', encoding='utf-8'),
               help='Name of output file')
 def migrate(mcf, output):
+    """Migrate legacy MCF format to YAML"""
     if mcf is None:
         raise click.UsageError('Missing arguments')
     else:

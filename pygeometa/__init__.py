@@ -47,6 +47,7 @@
 import click
 
 from pygeometa.core import generate_metadata
+from pygeometa.importer import import_
 from pygeometa.migrations import migrate
 
 __version__ = '0.3.dev0'
@@ -60,3 +61,4 @@ def cli():
 
 cli.add_command(generate_metadata)
 cli.add_command(migrate)
+cli.add_command(import_)

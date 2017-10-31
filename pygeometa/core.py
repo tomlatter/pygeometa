@@ -297,6 +297,7 @@ def get_abspath(mcf, filepath):
                               dir_okay=True, file_okay=False),
               help='Locally defined metadata schema')
 def generate_metadata(ctx, mcf, schema, schema_local, output):
+    """Generate XML metadata from MCF file"""
     if mcf is None or (schema is None and schema_local is None):
         raise click.UsageError('Missing arguments')
     else:
