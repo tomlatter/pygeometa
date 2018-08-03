@@ -15,7 +15,7 @@
     {% for k, v in record['facility'].items() %}
     <wmdr:facility>
         <wmdr:ObservingFacility gml:id="_{{ v['identifier'] }}">
-            <gml:identifier codeSpace="http://wigos.wmo.int">http://wigos.wmo.int/{{ v['identifier'] }}</gml:identifier>
+            <gml:identifierzz codeSpace="http://wigos.wmo.int">http://wigos.wmo.int/{{ v['identifier'] }}</gml:identifierzz>
             <gml:name>{{ v['name'] }}</gml:name>
             <wmdr:responsibleParty>
                 <wmdr:ResponsibleParty>
